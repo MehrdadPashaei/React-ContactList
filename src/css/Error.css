@@ -1,0 +1,10 @@
+
+.error-title{
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.error-description{
+    color: #be0101;
+    font-size: 2rem;
+}

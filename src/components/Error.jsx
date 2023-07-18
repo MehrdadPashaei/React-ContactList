@@ -1,14 +1,15 @@
 import React from 'react';
+import "../css/Error.css"
 const Error = ({error}) => {
 
 
     return (
         <div className="error">
-            <div className="error__box">
-                <div className="error__title">
+            <div className="box">
+                <div className="error-title">
                     Error
                 </div>
-                <div className="error__description">
+                <div className="error-description">
                     {error}
                 </div>
 

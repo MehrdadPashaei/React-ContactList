@@ -7,7 +7,7 @@ import Error from "../components/Error.jsx";
 
 const CONTACTS_API = "http://localhost:3000/contacts";
 
-const ContactDetail = ({name, number,detail}) => {
+const ContactDetail = () => {
 
     const [contact,setContact] = useState([]);
     const {id} = useParams();
@@ -40,9 +40,9 @@ const ContactDetail = ({name, number,detail}) => {
             {TheError && (<Error error={TheError.message} closeError={closeError}/>)}
             <div className="contact">
                 <div className="contact-info">
-                    <h3><span>Name </span> : {name}</h3>
-                    <h4><span>Phone Number</span> : {number}</h4>
-                    <p><span>Detail</span> : {detail}</p>
+                    <h3><span>Name </span> : {contact.name}</h3>
+                    <h4><span>Phone Number</span> : {contact.number}</h4>
+                    <p><span>Detail</span> : {contact.detail}</p>
                 </div>
                 <div className="buttons">
                     <Link to={`/edit/${id}`}>
