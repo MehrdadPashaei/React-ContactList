@@ -9,30 +9,22 @@ const CONTACTS_API = "http://localhost:3000/contacts";
 
 const ContactDetail = () => {
 
-    const [contact,setContact] = useState([]);
-    const {id} = useParams();
+    const [contact, setContact] = useState([]);
+    const {id} = useParams()
     const [TheError, handleError, closeError] = useHandleError();
     useEffect(() => {
-        const getContacts = async () =>{
+        const getContacts = async () => {
             try {
-                const {data} = await axios.get(CONTACTS_API);
+                const {data} = await axios.get(`${CONTACTS_API}/${id}`);
                 setContact(data);
-            }catch (error){
+            } catch (error) {
                 handleError(error)
             }
         }
         getContacts();
-    },[]);
+    }, []);
 
-    const deleteHandler = (id) => {
-        axios.delete(`http://localhost:3000/contacts/${id}`)
-            .then(response => {
-                setContact(contact.filter((contact) => contact.id !== id));
-            })
-            .catch(error => {
-                handleError(error);
-            })
-    }
+
 
     return (
 
@@ -44,12 +36,12 @@ const ContactDetail = () => {
                     <h4><span>Phone Number</span> : {contact.number}</h4>
                     <p><span>Detail</span> : {contact.detail}</p>
                 </div>
-                <div className="buttons">
-                    <Link to={`/edit/${id}`}>
-                        <button className="btn edit-btn">Edit</button>
-                    </Link>
-                    <button className="btn remove-btn" onClick={() => deleteHandler(id)}>Remove</button>
-                </div>
+                {/*<div className="buttons">*/}
+                {/*    <Link to={`/edit/${id}`}>*/}
+                {/*        <button className="btn edit-btn">Edit</button>*/}
+                {/*    </Link>*/}
+                {/*    <button className="btn remove-btn" onClick={() => deleteHandler(id)}>Remove</button>*/}
+                {/*</div>*/}
 
             </div>
             <Link className="contactDetail-btn" to="/">Go to contacts</Link>
