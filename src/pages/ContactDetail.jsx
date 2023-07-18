@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Link} from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
 import axios from "axios";
 import "../css/ContactDetail.css"
 import useHandleError from "../components/useHandleError.jsx";
@@ -7,9 +7,10 @@ import Error from "../components/Error.jsx";
 
 const CONTACTS_API = "http://localhost:3000/contacts";
 
-const ContactDetail = ({id,name, number,detail}) => {
+const ContactDetail = ({name, number,detail}) => {
 
     const [contact,setContact] = useState([]);
+    const {id} = useParams();
     const [TheError, handleError, closeError] = useHandleError();
     useEffect(() => {
         const getContacts = async () =>{
@@ -20,7 +21,7 @@ const ContactDetail = ({id,name, number,detail}) => {
                 handleError(error)
             }
         }
-        getContacts()
+        getContacts();
     },[]);
 
     const deleteHandler = (id) => {
@@ -39,7 +40,7 @@ const ContactDetail = ({id,name, number,detail}) => {
             {TheError && (<Error error={TheError.message} closeError={closeError}/>)}
             <div className="contact">
                 <div className="contact-info">
-                    <h3><span>Name</span> : {name}</h3>
+                    <h3><span>Name </span> : {name}</h3>
                     <h4><span>Phone Number</span> : {number}</h4>
                     <p><span>Detail</span> : {detail}</p>
                 </div>
