@@ -1,0 +1,51 @@
+.form-container{
+
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.number-input,
+.name-input{
+    padding: 10px 30px;
+    border: 1px solid orange;
+    border-radius: 24px;
+    background-color: #e7d5d5;
+    transition: .3s ease-in-out;
+    font-size: 1.7rem;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgb(79, 61, 61),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);;
+    font-weight: 600;
+    margin-top: 30px;
+}
+.form textarea{
+    resize: none;
+    width: 400px;
+    height: 150px;
+}
+
+
+.submit-btn{
+    padding: 15px 50px;
+    border: 1px solid orange;
+    border-radius: 24px;
+    background-color: #a24f5e;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    font-size: 1.7rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0 -23px 25px 0 inset, rgba(0, 0, 0, 0.15) 0 -36px 30px 0 inset, rgba(0, 0, 0, 0.1) 0 -79px 40px 0 inset, rgba(65, 65, 65, 0.06) 0 2px 1px, rgba(0, 0, 0, 0.09) 0 4px 2px, rgba(0, 0, 0, 0.09) 0 8px 4px, rgba(0, 0, 0, 0.09) 0 16px 8px, rgba(0, 0, 0, 0.09) 0 32px 16px;;
+    font-weight: 600;
+    margin-top: 30px;
+
+}
+.submit-btn:hover{
+    background-color: #f8c3c3;
+    color: #5b07a9;
+}
+.btn-back{
+    text-decoration: none;
+    color: #1e1d1d;
+}

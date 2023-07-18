@@ -1,0 +1,24 @@
+
+.contactDetail{
+    flex-direction: column;
+
+}
+.contactDetail-btn{
+    text-decoration: none;
+    padding: 15px 50px;
+    border: 1px solid orange;
+    border-radius: 24px;
+    background-color: #a24f5e;
+    color: #1e1d1d;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    font-size: 1.7rem;
+    box-shadow: rgba(0, 0, 0, 0.17) 0 -23px 25px 0 inset, rgba(0, 0, 0, 0.15) 0 -36px 30px 0 inset, rgba(0, 0, 0, 0.1) 0 -79px 40px 0 inset, rgba(65, 65, 65, 0.06) 0 2px 1px, rgba(0, 0, 0, 0.09) 0 4px 2px, rgba(0, 0, 0, 0.09) 0 8px 4px, rgba(0, 0, 0, 0.09) 0 16px 8px, rgba(0, 0, 0, 0.09) 0 32px 16px;;
+    font-weight: 600;
+    margin-top: 200px;
+    margin-left: 600px;
+}
+.contactDetail-btn:hover{
+    background-color: #ff4400;
+    color: #c8c3ce;
+}
